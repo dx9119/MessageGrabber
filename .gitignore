@@ -1,41 +1,50 @@
-### Maven ###
+*.class
 target/
-!.mvn/wrapper/maven-wrapper.jar
+bin/
+
+.idea/
+.gigaide/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+
+mvnw
+mvnw.cmd
+.mvn/wrapper/maven-wrapper.jar
 .mvn/wrapper/maven-wrapper.properties
 
-### Logs ###
-logs/
+.gradle/
+build/
+settings.gradle.kts
+gradle.properties
+gradlew
+gradlew.bat
+
 *.log
 
-### Spring Boot ###
-*.pid
-*.gz
+.venv/
+venv/
 
-### IntelliJ IDEA ###
-.idea/
-*.iml
+# Файлы конфигурации
+application-local.properties
+application-dev.properties
+*.swp # Файлы подкачки Vim
+*.swo # Файлы подкачки Vim
+
+*.key
+*.p12
+*.pem
+ssl/
+
+# Прочие временные файлы и директории
+tmp/
+temp/
 out/
+.cache/
 
-### VS Code ###
-.vscode/
+# Файлы отладки
+hs_err_pid*
 
-### Eclipse / STS ###
-.classpath
-.project
-.settings/
-.factorypath
-.springBeans
-.sts4-cache/
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-
-### Local config ###
-application*.properties
-application*.yml
-application*.yaml
+# Файлы профилирования
+java_pid*
