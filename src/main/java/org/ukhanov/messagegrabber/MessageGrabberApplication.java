@@ -5,7 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.ukhanov.messagegrabber.app.config.AppProperties;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {
+        "org.ukhanov.messagegrabber.app"
+})
 @EnableConfigurationProperties(AppProperties.class)
 public class MessageGrabberApplication {
 

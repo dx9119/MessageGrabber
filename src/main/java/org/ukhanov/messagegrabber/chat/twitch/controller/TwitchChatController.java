@@ -1,5 +1,6 @@
 package org.ukhanov.messagegrabber.chat.twitch.controller;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.ukhanov.messagegrabber.app.config.AppProperties;

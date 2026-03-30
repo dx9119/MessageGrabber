@@ -1,6 +1,7 @@
 package org.ukhanov.messagegrabber.chat.twitch.service;
 
 import com.github.twitch4j.TwitchClient;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Service;
 
 @Service

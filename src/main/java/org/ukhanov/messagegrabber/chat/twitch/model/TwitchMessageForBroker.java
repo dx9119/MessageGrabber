@@ -1,19 +1,19 @@
-package org.ukhanov.messagegrabber.chat.model;
+package org.ukhanov.messagegrabber.chat.twitch.model;
 
-import org.ukhanov.messagegrabber.app.model.IBrokerMessage;
+import org.ukhanov.messagegrabber.app.model.IMessageForBroker;
 import org.ukhanov.messagegrabber.app.model.MessageSource;
 
 import java.time.ZonedDateTime;
 import java.util.Objects;
 
-public class TwitchMessage implements IBrokerMessage {
+public class TwitchMessageForBroker implements IMessageForBroker {
     private final MessageSource source;
     private final String name;
     private final String outerId;
     private final ZonedDateTime timeCreate;
     private final String body;
 
-    public TwitchMessage(Builder builder) {
+    public TwitchMessageForBroker(Builder builder) {
         this.body =builder.body;
         this.name=builder.name;
         this.outerId=builder.outerId;
@@ -49,7 +49,7 @@ public class TwitchMessage implements IBrokerMessage {
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        TwitchMessage that = (TwitchMessage) o;
+        TwitchMessageForBroker that = (TwitchMessageForBroker) o;
         return source == that.source && Objects.equals(name, that.name) && Objects.equals(outerId, that.outerId) && Objects.equals(timeCreate, that.timeCreate) && Objects.equals(body, that.body);
     }
 
@@ -99,8 +99,8 @@ public class TwitchMessage implements IBrokerMessage {
             return this;
         }
 
-        public TwitchMessage build(){
-            return new TwitchMessage(this);
+        public TwitchMessageForBroker build(){
+            return new TwitchMessageForBroker(this);
         }
 
     }
