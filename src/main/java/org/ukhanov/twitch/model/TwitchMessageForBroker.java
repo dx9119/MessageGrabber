@@ -1,7 +1,7 @@
-package org.ukhanov.messagegrabber.chat.twitch.model;
+package org.ukhanov.twitch.model;
 
-import org.ukhanov.messagegrabber.app.model.IMessageForBroker;
-import org.ukhanov.messagegrabber.app.model.MessageSource;
+import org.ukhanov.messagegrabber.model.IMessageForBroker;
+import org.ukhanov.messagegrabber.model.MessageSource;
 
 import java.time.ZonedDateTime;
 import java.util.Objects;
@@ -75,7 +75,7 @@ public class TwitchMessageForBroker implements IMessageForBroker {
         private String body;
 
         public Builder messageSource(MessageSource messageSource){
-            this.source =messageSource;
+            this.source=messageSource;
             return this;
         }
 
@@ -95,7 +95,7 @@ public class TwitchMessageForBroker implements IMessageForBroker {
         }
 
         public Builder messageBody(String messageBody){
-            this.body =messageBody;
+            this.body=messageBody;
             return this;
         }
 
@@ -105,7 +105,3 @@ public class TwitchMessageForBroker implements IMessageForBroker {
 
     }
 }
-
-
-
-

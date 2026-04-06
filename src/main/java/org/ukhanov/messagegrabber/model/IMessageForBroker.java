@@ -1,4 +1,4 @@
-package org.ukhanov.messagegrabber.app.model;
+package org.ukhanov.messagegrabber.model;
 
 import java.time.ZonedDateTime;
 

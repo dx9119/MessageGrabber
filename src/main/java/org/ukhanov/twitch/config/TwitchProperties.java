@@ -1,10 +1,10 @@
-package org.ukhanov.messagegrabber.app.config;
+package org.ukhanov.twitch.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 
-@ConfigurationProperties(prefix = "app")
-public record AppProperties(
+@ConfigurationProperties(prefix = "tw")
+public record TwitchProperties(
         String twitchToken,
         String twitchChannel
 ) {}

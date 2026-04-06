@@ -48,6 +48,20 @@
             <artifactId>spring-boot-starter-amqp</artifactId>
         </dependency>
 
+        <!-- Source: https://mvnrepository.com/artifact/io.github.centrifugal/centrifuge-java -->
+        <dependency>
+            <groupId>io.github.centrifugal</groupId>
+            <artifactId>centrifuge-java</artifactId>
+            <version>0.5.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.tyrus.bundles</groupId>
+            <artifactId>tyrus-standalone-client</artifactId>
+            <version>1.17</version>
+        </dependency>
+
 
     </dependencies>
 

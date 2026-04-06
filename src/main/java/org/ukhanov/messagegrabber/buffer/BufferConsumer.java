@@ -1,8 +1,8 @@
-package org.ukhanov.messagegrabber.app.buffer;
+package org.ukhanov.messagegrabber.buffer;
 
 import org.springframework.stereotype.Service;
-import org.ukhanov.messagegrabber.app.model.IMessageBrokerPublisher;
-import org.ukhanov.messagegrabber.app.model.IMessageForBroker;
+import org.ukhanov.messagegrabber.model.IMessageBrokerPublisher;
+import org.ukhanov.messagegrabber.model.IMessageForBroker;
 
 import java.util.concurrent.*;
 

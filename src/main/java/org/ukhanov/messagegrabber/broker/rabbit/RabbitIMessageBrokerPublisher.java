@@ -1,11 +1,11 @@
-package org.ukhanov.messagegrabber.app.broker.rabbit;
+package org.ukhanov.messagegrabber.broker.rabbit;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
-import org.ukhanov.messagegrabber.app.model.IMessageForBroker;
-import org.ukhanov.messagegrabber.app.model.IMessageBrokerPublisher;
+import org.ukhanov.messagegrabber.model.IMessageForBroker;
+import org.ukhanov.messagegrabber.model.IMessageBrokerPublisher;
 
 @Service
 @Profile("rabbit")
