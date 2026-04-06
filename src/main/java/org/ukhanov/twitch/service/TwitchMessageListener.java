@@ -1,16 +1,18 @@
-package org.ukhanov.messagegrabber.chat.twitch.service;
+package org.ukhanov.twitch.service;
 
 import com.github.twitch4j.TwitchClient;
 import com.github.twitch4j.chat.events.channel.ChannelMessageEvent;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.stereotype.Service;
-import org.ukhanov.messagegrabber.app.buffer.BufferService;
-import org.ukhanov.messagegrabber.app.model.IMessageForBroker;
-import org.ukhanov.messagegrabber.app.model.MessageSource;
-import org.ukhanov.messagegrabber.chat.twitch.model.TwitchMessageForBroker;
+import org.ukhanov.messagegrabber.buffer.BufferService;
+import org.ukhanov.messagegrabber.model.IMessageForBroker;
+import org.ukhanov.messagegrabber.model.MessageSource;
+import org.ukhanov.twitch.model.TwitchMessageForBroker;
 
 import java.time.ZonedDateTime;
 
 @Service
+@ConditionalOnBean(TwitchClient.class)
 public class TwitchMessageListener {
 
     public TwitchMessageListener(TwitchClient client,

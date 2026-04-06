@@ -1,11 +1,11 @@
-package org.ukhanov.messagegrabber.app.broker.kafka;
+package org.ukhanov.messagegrabber.broker.kafka;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Profile;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
-import org.ukhanov.messagegrabber.app.model.IMessageForBroker;
-import org.ukhanov.messagegrabber.app.model.IMessageBrokerPublisher;
+import org.ukhanov.messagegrabber.model.IMessageForBroker;
+import org.ukhanov.messagegrabber.model.IMessageBrokerPublisher;
 
 @Service
 @Profile("kafka")

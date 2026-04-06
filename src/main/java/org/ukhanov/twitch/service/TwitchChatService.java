@@ -1,10 +1,11 @@
-package org.ukhanov.messagegrabber.chat.twitch.service;
+package org.ukhanov.twitch.service;
 
 import com.github.twitch4j.TwitchClient;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.stereotype.Service;
 
 @Service
+@ConditionalOnBean(TwitchClient.class)
 public class TwitchChatService {
 
     private final TwitchClient twitchClient;
@@ -16,9 +17,4 @@ public class TwitchChatService {
     public void sendMessage(String channel, String message) {
         twitchClient.getChat().sendMessage(channel, message);
     }
-
-
-
-
 }
-
